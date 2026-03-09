@@ -1,0 +1,255 @@
+# ================================================================================
+# AKBAR DAWAKHANA EHR - GITIGNORE
+# ================================================================================
+# This repository contains only documentation and release files
+# Source code is proprietary and NOT included in this public repository
+# ================================================================================
+
+# ==================== NEVER COMMIT SOURCE CODE ====================
+# Prevent accidental commits of proprietary source code
+
+# Python source files
+*.py
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.dll
+
+# Source directories
+src/
+source/
+app/
+modules/
+components/
+core/
+
+# ==================== NEVER COMMIT SENSITIVE DATA ====================
+
+# Database files (contain patient data - CRITICAL)
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# Configuration with credentials
+config.py
+config.json
+settings.py
+secrets.py
+credentials.json
+.env
+.env.local
+.env.production
+
+# License and activation files
+license.key
+*.lic
+activation.dat
+*.key
+*.pem
+serial.txt
+
+# Backup files (may contain patient data)
+*.bak
+*.backup
+backup_*.db
+*.sql
+*.dump
+
+# ==================== PATIENT DATA (HIPAA/PRIVACY) ====================
+
+# Patient data directories
+data/
+patient_data/
+medical_records/
+prescriptions/
+exports/
+qr_codes/
+backups/
+
+# Exported files
+*.pdf
+reports/*.pdf
+prescriptions/*.pdf
+
+# Images (may contain patient info)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+!logo.png
+!screenshots/*.png
+!screenshots/*.jpg
+
+# ==================== BUILD & DISTRIBUTION ====================
+
+# Build outputs (executables are released separately)
+build/
+dist/
+*.exe
+*.app
+*.dmg
+*.pkg
+*.msi
+*.deb
+*.rpm
+
+# PyInstaller
+*.spec
+*.manifest
+
+# Installer packages
+installers/
+setup_*.exe
+
+# ==================== DEVELOPMENT FILES ====================
+
+# IDE settings
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.atom/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*~
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Test files
+test/
+tests/
+*_test.py
+test_*.py
+
+# ==================== DOCUMENTATION EXCEPTIONS ====================
+
+# Keep these documentation files
+!README.md
+!LICENSE
+!CHANGELOG.md
+!INSTALLATION.md
+!FAQ.md
+
+# Keep screenshots folder structure
+!screenshots/
+!screenshots/.gitkeep
+
+# Keep templates for users
+!templates/
+!templates/.gitkeep
+
+# ==================== RELEASES ====================
+
+# Release notes are kept
+!RELEASE_NOTES.md
+
+# Release archives (too large for git)
+releases/*.zip
+releases/*.tar.gz
+releases/*.7z
+releases/*.rar
+
+# Keep release folder structure
+!releases/
+!releases/.gitkeep
+
+# ==================== ALLOW SPECIFIC ASSETS ====================
+
+# Branding assets
+!logo.png
+!logo.ico
+!banner.png
+
+# Documentation images
+!docs/images/
+
+# ==================== VERSION CONTROL ====================
+
+# Git
+.git/
+.gitattributes
+
+# Version control
+*.orig
+
+# ==================== SECURITY ====================
+
+# SSH keys
+id_rsa
+id_rsa.pub
+*.pem
+
+# SSL certificates
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# API keys
+api_keys.txt
+tokens.json
+
+# ==================== MISCELLANEOUS ====================
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Office files (may contain sensitive info)
+*.docx
+*.xlsx
+*.pptx
+
+# Email backups
+*.mbox
+*.eml
+
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Audio files
+*.mp3
+*.wav
+*.flac
+
+# ==================== IMPORTANT REMINDERS ====================
+
+# README: This is a PUBLIC repository
+# - Contains only documentation, licenses, and public information
+# - Source code is PROPRIETARY and distributed separately
+# - Patient data must NEVER be committed
+# - License keys and activation codes are PRIVATE
+
+# To add allowed files, use: git add -f filename
+# To check what would be committed: git status
+# To verify before commit: git diff --cached
+
+# ==================== END OF .gitignore ====================
